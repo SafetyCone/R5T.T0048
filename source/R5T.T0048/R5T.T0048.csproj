@@ -1,7 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\R5T.Magyar\source\R5T.Magyar.T002\R5T.Magyar.T002.csproj" />
     <ProjectReference Include="..\..\..\R5T.Magyar\source\R5T.Magyar\R5T.Magyar.csproj" />
+    <ProjectReference Include="..\..\..\R5T.T0039\source\R5T.T0039.T002\R5T.T0039.T002.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
