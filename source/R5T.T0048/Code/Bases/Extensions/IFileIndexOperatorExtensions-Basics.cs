@@ -42,11 +42,21 @@ namespace System
             _.AddEntryIdempotent(index, filePath);
         }
 
+        public static void AddEntriesIdempotent(this IFileIndexOperator _,
+            FileIndex index,
+            IEnumerable<string> filePaths)
+        {
+            index.FilePaths.AddRange(filePaths); // HashSet<T> takes care of the idempotency.
+        }
+
+        /// <summary>
+        /// Quality-of-life overload for <see cref="AddEntriesIdempotent(IFileIndexOperator, FileIndex, IEnumerable{string})"/>.
+        /// </summary>
         public static void AddEntries(this IFileIndexOperator _,
             FileIndex index,
             IEnumerable<string> filePaths)
         {
-            index.FilePaths.AddRange(filePaths);
+            _.AddEntriesIdempotent(index, filePaths);
         }
 
         public static void ClearEntries(this IFileIndexOperator _,
