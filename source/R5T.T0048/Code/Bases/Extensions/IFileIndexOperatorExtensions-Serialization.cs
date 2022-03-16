@@ -1,7 +1,6 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
-
-using R5T.Magyar.IO;
 
 using R5T.T0048;
 
