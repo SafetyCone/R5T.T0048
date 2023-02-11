@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
+
+using R5T.Magyar;
 
 using R5T.T0048;
 
@@ -14,7 +15,7 @@ namespace System
             FileIndex index,
             bool overwrite = IOHelper.DefaultOverwriteValue)
         {
-            FileHelper.WriteAllLinesSynchronous(
+            FileHelper.WriteAllLines_Synchronous(
                 textFilePath,
                 index.FilePaths,
                 overwrite);
@@ -29,7 +30,7 @@ namespace System
                 .OrderAlphabetically()
                 ;
 
-            FileHelper.WriteAllLinesSynchronous(
+            FileHelper.WriteAllLines_Synchronous(
                 textFilePath,
                 outputLines,
                 overwrite);
