@@ -2,6 +2,7 @@
 using System.IO;
 
 using R5T.Magyar;
+using R5T.Magyar.Extensions;
 
 using R5T.T0048;
 
